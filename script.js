@@ -133,5 +133,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = parseInt(`${startTime ? timeSpent : 0 } `) +  'second';
+  document.getElementById("show-time").innerHTML = parseInt(`${startTime ? timeSpent : 0 } `) + 'Seconds';
 }, 1000);
