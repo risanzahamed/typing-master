@@ -8,7 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
-let startTime;
+let startTime ;
 let questionText = "";
 
 // Load and display question
@@ -113,12 +113,9 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      
-      
-      countdownOverlay.innerHTML = '',
-      
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      countdownOverlay.style.display = "none";
     }
     count--;
   }, 1000);
@@ -136,5 +133,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = parseInt(`${startTime ? timeSpent : 0 } `) +  'second';
 }, 1000);
